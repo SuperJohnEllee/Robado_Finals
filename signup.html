@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="IE=edge">
+	<meta name="author" content="Master Chef">
+	<title>Master Chef - Sign Up</title>
+	<link rel="stylesheet" href="css/style.css">	
+	<link rel="icon" href="img/logo.jpg">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<nav class="navbar">
+		<a class="navbar-brand logo" href="#"><img src="img/logo.jpg" height="45" width="40"></a>
+		<li class="nav-item">
+			<a class="nav-link" href="index.html"><span class="fa fa-home"></span> Home</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="food.html"><span class="fa fa-cutlery"></span> Foods</a>			
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="finalists.html"><span class="fa fa-users"></span> Finalists</a>
+		</li>
+		<div class="mr-auto">
+			<li class="nav-item">
+				<a class="nav-link" href="signup.html"><span class="fa fa-user-plus"></span> Sign Up</a>
+			</li>
+		</div>
+	</nav>
+	<h1 class="text-center">Sign Up in Master Chef</h1>
+	<div ng-app="myApp" ng-controller="myCtrl" class="registration">
+ 
+ 	 <form class="form-center">
+    
+    <label>Last Name</label>
+    <input type="text" />
+    <p class="error">
+    </p>
+    <br>
+
+    <label>First Name</label>
+    <input type="text" name="">
+    <p class="error"></p>
+    <br>
+
+    <label>Middle Name</label>
+    <input type="text" ng>
+    <p class="error"></p>
+    <br>
+
+
+    <label>Email</label>
+    <input type="email" ng-model="email">
+    <p class="error"></p>
+    <br>
+
+    <label>Birthdate</label>
+    <input type="date" / ng-model="bdate">
+    <p class="error">
+    </p>
+    <br>
+
+    <label>Username</label>
+    <input type="text" ng-model="username">
+    <p class="error"></p>
+    <br>
+
+    <label>Password</label>
+    <input ng-click="pass" type="password" />
+    <p class="error">
+ 
+    </p>
+    <br>
+    <label>Confirm Password</label>
+    <input ng-model="conf_pass" type="password" />
+    <p class="error">
+    </p>
+    <br>
+    <div class="register_button">
+   	<button ng-click="signUp()" type="submit" name="register">Register</button>
+    </div>
+  </form>
+</div>
+ <script src="js/angular.min.js"></script>
+ <script>
+ 	var app = angular.module('myApp',[]);
+ 		app.controller('myCtrl', function($scope){
+
+		$scope.signUp = function(){
+			
+			if ($scope.pass != $scope.conf_pass) {
+				alert('Password do not match');
+			} else {
+				alert('Sucessfully registered');
+				}
+			};
+ 		});
+ </script>
+</body>
+</html>

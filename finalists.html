@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="IE=edge">
+	<meta name="author" content="Master Chef">
+	<title>Master Chef - Finalists</title>
+	<link rel="icon" href="img/logo.jpg">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body ng-app="myApp">
+	<nav class="navbar">
+		<a class="navbar-brand logo" href="#"><img src="img/logo.jpg" height="45" width="45"></a>
+		<li class="nav-item">
+			<a class="nav-link" href="index.html"><span class="fa fa-home"></span> Home</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="food.html"><span class="fa fa-cutlery"></span> Foods</a>			
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="finalists.html"><span class="fa fa-users"></span> Finalists</a>
+		</li>
+		<div class="mr-auto">
+			<li class="nav-item">
+				<a class="nav-link" href="signup.html"><span class="fa fa-user-plus"></span> Sign Up</a>
+			</li>
+		</div>
+	</nav>
+	<h1 class="text-center">Master Chef Finalists</h1>
+	<hr>
+	<div ng-controller="myCtrl" class="row">
+		<div class="column">
+			<h3 class="text-center">Gerron Hurt</h3>
+			<button onclick="alert('You voted for Gerron');" ng-click="count_gerron = count_gerron + 1"><img src="img/person/gerron.jpg"></button>
+			<p>Vote for Gerron: {{ count_gerron }}</p>
+		</div>
+		<div class="column">
+			<h3 class="text-center">Cesar Cano</h3>
+			<button onclick="alert('You voted for Cesar');" ng-click="count_cesar = count_cesar + 1"><img src="img/person/cesar.jpg"></button>
+			<p>Vote for Cesar: {{ count_cesar }}</p>
+		</div>
+		<div class="column">
+			<h3 class="text-center">Ashley Mincey</h3>
+			<button onclick="alert('You voted for Ashley');" ng-click="count_ashley = count_ashley + 1"><img src="img/person/ashley.jpg"></button>
+			<p>Vote for Ashley: {{ count_ashley }}</p>
+		</div>
+	</div>
+
+<script src="js/angular.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
